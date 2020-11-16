@@ -1,0 +1,71 @@
+<script>
+
+    const qtd_time = 2,
+          jogadores_p_time = 2,
+          total_jog = 4;
+          
+    var idade,
+        peso,
+        altura,
+        soma_18=0,
+        contador_idade=0,
+        media_idade=0,
+        contador_altura=0,
+        media_altura=0,
+        contador_80kg=0,
+        perc_80kg=0,
+        contador,
+        contador2;
+    
+contador = 1;
+contador2 = 1;
+
+document.write("<br><br> Média de idade: <br><br>");
+    
+    while (contador <= qtd_time) {
+        alert("Time " + contador);
+        
+        while (contador2 <= jogadores_p_time) {
+            alert("Jogador " + contador2);
+            
+            idade = Number(prompt("Informe sua idade"));
+            
+            contador_idade += idade; 
+            
+            if (idade < 18) {
+                soma_18 += 1;
+            }
+            peso = Number(prompt("Informe seu peso"));
+            
+            if (peso > 80) {
+                contador_80kg += 1;
+            }
+            altura = Number(prompt("Informe sua altura em cm"));
+            
+            contador_altura += altura;
+            contador2++;
+        }
+        
+    media_idade = contador_idade / jogadores_p_time;
+        
+    document.write("Time "+contador+" :"+media_idade+" anos<br>");
+        
+    media_idade = 0;
+    contador_idade = 0;
+    contador++;
+    contador2 = 1;
+
+    }
+document.write(" <br>Menores de idade:");
+document.write(+soma_18+" jogador(es) <br>");
+    
+media_altura = contador_altura / total_jog;
+        
+document.write("<br><br> Média de altura: ");
+document.write(+media_altura+" centímetros <br>");
+
+perc_80kg = (contador_80kg * 100) / total_jog;    
+    
+document.write("<br><br> Jogadores com mais de 80kg: ");
+document.write(+perc_80kg+" % ");
+</script>

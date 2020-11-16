@@ -1,0 +1,26 @@
+<script>
+
+/* 09. Crie um programa que imprima a soma dos números pares entre 24 e 200*/
+    
+var i,
+    num, 
+    soma,
+    contador;
+    
+contador = 24;
+soma = 0;
+    
+    do {
+
+        if (contador % 2 == 0) {
+        soma += contador;
+        contador++;
+        }
+        else {
+        contador++;
+        }
+    } while (contador <= 200)
+    
+document.write("A soma de todos os números pares entre 24 e 200 é: "+soma);
+
+</script>

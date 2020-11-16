@@ -1,0 +1,21 @@
+<script>
+var num,
+    vezes,
+    mult,
+    contador;
+    
+num = prompt("Informe o multiplicando:");
+vezes = prompt("Informe o multiplicador:");
+
+contador = 1;    
+mult = num * vezes;
+
+    document.write(num + " * " + vezes + " = ");
+
+    while (contador <= vezes) {
+        document.write(num + " + ");
+        
+        contador++;
+    }
+    document.write(" = " + mult);
+</script>

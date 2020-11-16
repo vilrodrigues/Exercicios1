@@ -1,0 +1,25 @@
+<script>
+
+/* 11. Faça um programa que calcule e some N números. Onde N deve ser informado pelo
+usuário.*/
+    
+var num,
+    termo, 
+    soma,
+    contador;
+
+num = Number(prompt("Quantos números quer somar?"));
+soma = 0;
+contador = 1;
+
+    do { 
+    termo = Number(prompt("Informe o "+contador+"º número:"));
+        
+    soma += termo;
+    contador++;
+    
+    } while (contador <= num)
+
+    document.write("Soma dos números = "+soma);
+
+</script>

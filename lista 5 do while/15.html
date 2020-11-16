@@ -1,0 +1,28 @@
+<script>
+
+/*15. Faça um programa que mostre as tabuadas dos números de 1 a 10.*/
+    
+var num,
+    mult,
+    contador;
+
+contador = 1;
+num = 1;
+    
+    do {
+        do{
+        mult = num * contador;
+    
+        document.write(num + " * " + contador + " = " + mult + "<br>")
+    
+        contador++;
+        } while (contador <= 10)
+    
+    document.write("<br>")
+    
+    contador = 1;
+    num++;
+        
+    }  while ( num <= 10)  
+
+</script>

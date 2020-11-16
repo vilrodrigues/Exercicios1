@@ -1,0 +1,18 @@
+<script>
+    var i, nome, salario, s, n;
+
+    for (i = 1; i <= 3; i++) {
+        nome = prompt("Informe seu nome:");
+        salario = parseFloat(prompt(" Seu salário: R$"));
+
+        if (i == 1) {
+            n = nome;
+            s = salario;
+        } else if (salario > s) {
+            n = nome;
+            s = salario;
+        }
+    }
+    document.write(" O maior salário é do funcionário: " + n + " R$" + s);
+
+</script>

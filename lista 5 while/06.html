@@ -1,0 +1,38 @@
+<script>
+    var num = 0,
+        media = 0, 
+        soma = 0,
+        maiorn = 0, 
+        menorn = 0,
+        contador,
+        n = 0;
+
+contador = 1;
+
+    while ( contador <= 10) {
+        num = Number(prompt(" Informe o número: "));
+
+            soma += num;
+            media = soma / 10;
+
+        if (contador == 1) {
+            maiorn = num; 
+            menorn = num;
+            contador++;
+        } 
+        else if (num > maiorn) {
+            maiorn = num;
+            contador++;
+        }
+        else if (num < menorn) {
+            menorn = num;
+            contador++;
+        }
+    }
+    
+    document.write("A média dos números é: " + media + "<br>");
+    document.write(" A soma dos números é: " + soma + "<br>");
+    document.write("O maior é: " + maiorn + "<br>");
+    document.write("O menor é: " + menorn);
+
+</script>

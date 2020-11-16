@@ -1,0 +1,26 @@
+<script>
+var mult,
+    num, 
+    soma,
+    multiplo,
+    contador;
+
+contador = 1;
+soma = 0;
+    
+num = Number(prompt("Informe qual o número: "));
+mult = Number(prompt("Quantos multiplos? "));
+
+
+    while (contador <= mult) {
+        multiplo = num * 2 * contador; 
+        
+        document.write(multiplo+"<br>");
+        
+        
+        soma += multiplo;
+        contador++;
+
+    }
+document.write("Soma : "+soma);
+</script>

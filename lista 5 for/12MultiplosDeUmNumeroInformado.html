@@ -1,0 +1,17 @@
+<script>
+    var mult, n, soma,multiplo;
+
+    
+    soma = 0;
+    n = Number(prompt("Informe qual o número:"));
+    mult = Number(prompt("Quantos multiplos?"));
+
+
+    for (i = 1; i <= mult; i++) {
+        multiplo = n * 2 * i; 
+        document.write(multiplo+"<br>");
+        soma = soma + multiplo;
+
+    }
+    document.write("Soma : "+soma);
+</script>

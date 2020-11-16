@@ -1,0 +1,31 @@
+<script>
+
+/* 08. Crie um programa que leia um número que servirá para controlar os números pares que
+serão impressos a partir de 2. Exemplo:
+Quantos: 4 Saída: 2 4 6 8 */
+    
+var num, 
+    nn,
+    contador;
+    
+contador = 1;
+
+num = prompt("Quantos numeros?");
+
+limite = num * 2;
+    
+    do {
+    
+        if (contador % 2 == 0) {
+        document.write((contador)+" <br>");
+            
+        contador++;
+        }
+        else {
+        document.write("");
+            
+        contador++;
+        }
+    } while (contador <= limite)
+
+</script>

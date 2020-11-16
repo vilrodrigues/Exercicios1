@@ -1,0 +1,22 @@
+<script>
+var num,
+    contador;
+
+num = Number(prompt("Informe o número"));
+
+contador = 1;
+    
+document.write("Limite superior : " + num + "<br>");    
+document.write("Ímpares menores : <br>")
+    while ( contador <= num){
+        if ( contador % 2 != 0) {
+            document.write(contador + "<br>");
+            
+            contador++;
+        }
+        else {
+            document.write("");
+            contador++;
+        }
+    }
+</script>

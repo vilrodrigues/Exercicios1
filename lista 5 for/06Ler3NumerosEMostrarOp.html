@@ -1,0 +1,26 @@
+<script>
+    var n, media, soma = 0,
+        maiorn, menorn;
+
+    for (i = 1; i <= 3; i++) {
+        n = parseInt(prompt(" Informe o " + i + "º número:"));
+
+        soma = n + soma;
+        media = soma / 10;
+
+        if (i == 1) {
+            maiorn = n;
+            menorn = n;
+        } else if (n > maiorn) {
+            maiorn = n;
+        } else if (n < menorn) {
+            menorn = n;
+        }
+    }
+
+    document.write("A média dos números é: " + media + "<br>");
+    document.write(" A soma dos números é: " + soma + "<br>");
+    document.write("O maior é: " + maiorn + "<br>");
+    document.write("O menor é: " + menorn);
+
+</script>

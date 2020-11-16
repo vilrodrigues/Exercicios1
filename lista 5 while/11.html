@@ -1,0 +1,18 @@
+<script>
+var num,
+    termo, 
+    soma,
+    contador;
+
+    num = Number(prompt("Quantos números quer somar?"));
+    soma = 0;
+    contador = 1;
+
+    while (contador <= num) { 
+        termo = Number(prompt("Informe o " + contador + "º número:"));
+        
+        soma += termo;
+        contador++;
+    }
+document.write("Soma dos números = " + soma);
+</script>

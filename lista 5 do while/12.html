@@ -1,0 +1,34 @@
+<script>
+
+/* 12. Faça um programa que exiba e calcule a soma dos N primeiros múltiplos de um inteiro
+K, onde N e K são informados pelo usuário.
+Dica: Os múltiplos e divisores de um número estão relacionados entre si da seguinte
+forma: Se 15 é divisível por 3, então 3 é divisor de 15, assim, 15 é múltiplo de 3. Se 8 é
+divisível por 2, então 2 é divisor de 8, assim, 8 é múltiplo de 2.*/
+    
+var mult,
+    num, 
+    soma,
+    multiplo,
+    contador;
+
+contador = 1;
+soma = 0;
+    
+num = Number(prompt("Informe qual o número: "));
+mult = Number(prompt("Quantos multiplos? "));
+
+
+    do {
+    multiplo = num * 2 * contador; 
+        
+    document.write(multiplo+"<br>");
+           
+    soma += multiplo;
+    contador++;
+
+    } while (contador <= mult)
+
+    document.write("Soma : "+soma);
+
+</script>

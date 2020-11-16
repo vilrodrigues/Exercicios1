@@ -1,0 +1,35 @@
+<script>
+    var turma,alunos_medias,k=0, 
+        alunos = 0,
+        soma_media = 0,
+        mediageral = 0,
+        medialuno = 0,
+        mediasuperior = 0,
+        total_alunos = 0;
+    const media = 7;
+    
+    document.write(" Media <= 7 <br>");
+    
+    for (turma = 1; turma <= 2; turma++) {
+        alunos = Number(prompt("Turma "+turma+" , quantos alunos?"));
+        
+        for (alunos_medias = 1; alunos_medias <= alunos; alunos_medias++) {
+            medialuno = Number(prompt("Qual a nota do " + alunos_medias + " º aluno: da turma " + turma));
+            
+            soma_media = soma_media + medialuno;
+            
+            if (medialuno >= 7) {
+                mediasuperior = mediasuperior + 1;
+            }
+        }
+        
+        total_alunos = total_alunos + alunos;
+        
+        mediageral =  soma_media / total_alunos;
+        
+        document.write("Turma " + turma + " : "+mediasuperior+" aluno(s)<br>");
+        
+        mediasuperior = 0;
+    }
+        document.write(" Média geral da escola: nota "+mediageral+"<br>");
+</script>

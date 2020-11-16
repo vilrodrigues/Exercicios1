@@ -1,0 +1,61 @@
+<script>
+var a = 0,
+    b = 1,
+    proxTermo,
+    contador,
+    nTermos,
+    somaTermos;
+
+nTermos = Number(prompt("Informe o numero de termos da sequência"));
+    
+    somaTermos = 0;
+    contador = 1;
+    
+    if  ( nTermos == 0) {
+        document.write("Sem termos<br>");
+        
+        
+        document.write("Soma dos termos: " + somaTermos);
+    }
+    else if ( nTermos == 1) {
+        document.write(a + "<br>");
+        
+        somaTermos = 0;
+        
+        document.write("Soma dos termos: " + somaTermos);
+    }
+    else if ( nTermos == 2) {
+        document.write(a + "<br>" + b + "<br>");
+        
+        somaTermos = 1;
+        
+        document.write("Soma dos termos: " + somaTermos);
+    }
+    else {
+        
+        nTermos = nTermos - 1;
+        
+        document.write(a + "<br>" + b + "<br>");
+        
+            while ( contador != nTermos) {
+                proxTermo = a + b;
+            
+                somaTermos += proxTermo;
+                
+                document.write( proxTermo + "<br>");
+        
+                a = b;
+                b = proxTermo;
+                contador++;
+            }
+        somaTermos += 1;
+    
+        document.write("Soma dos termos: " + somaTermos);
+    }
+
+
+
+
+
+
+</script>

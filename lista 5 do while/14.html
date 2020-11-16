@@ -1,0 +1,25 @@
+<script>
+
+/* 14. Faça um programa que receba um número, calcule e mostre a tabuada deste número */
+ 
+    
+var num,
+    mult,
+    contador;
+
+contador = 1;
+
+num = Number(prompt("Informe o número"));
+
+document.write("Tabuada do "+num+":<br><br>");
+
+    do {
+    mult = num * contador;
+    
+    document.write(num+" * "+contador+" = "+mult+"<br>")
+    
+    contador++;
+    
+    } while (contador <= 10)
+
+</script>

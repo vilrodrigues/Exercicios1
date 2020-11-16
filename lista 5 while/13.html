@@ -1,0 +1,43 @@
+<script>
+var contador,
+    alunosMedias,
+    alunos = 0,
+    somaMedia = 0,
+    mediaGeral = 0,
+    mediAluno = 0,
+    mediaSuperior = 0,
+    totalAlunos = 0;
+    
+
+const media = 7;
+    
+
+document.write("Media <= 7 <br>");
+document.write("<br>Alunos aprovados:<br>")
+
+contador = 1;
+    
+    while (contador <= 2) {
+        alunos = Number(prompt("Turma " + contador + " , quantos alunos?"));
+        
+        for (alunosMedias = 1; alunosMedias <= alunos; alunosMedias++) {
+            mediAluno = Number(prompt("Qual a nota do " + alunosMedias + " º aluno: da turma " + contador));
+            
+            somaMedia = somaMedia + mediAluno;
+            
+            if (mediAluno >= 7) {
+                mediaSuperior = mediaSuperior + 1;
+            }
+        }
+        
+        totalAlunos = totalAlunos + alunos;
+        
+        mediaGeral =  somaMedia / totalAlunos;
+        
+        document.write("Turma " + contador + " : " + mediaSuperior + " aluno(s)<br>");
+        
+        mediaSuperior = 0;
+        contador++;
+    }
+    document.write("Média geral da escola: Nota "+mediaGeral+"<br>");
+</script>

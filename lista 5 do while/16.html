@@ -1,0 +1,62 @@
+<script>
+
+/* 16. Faça um programa que leia um número positivo N e mostre N termos da série de
+Fibonacci.
+Dica: A Sequência de Fibonacci consiste em uma sucessão de números, tais que,
+definindo os dois primeiros números da sequência como 0 e 1, os números seguintes
+serão obtidos por meio da soma dos seus dois antecessores. Portanto, os números são:
+0,1,1,2,3,5,8,13,21,34,55,89,144,233,...*/
+    
+var a = 0,
+    b = 1,
+    proxTermo,
+    contador,
+    nTermos,
+    somaTermos;
+
+nTermos = Number(prompt("Informe o numero de termos da sequência"));
+    
+somaTermos = 0;
+contador = 1;
+    
+    if ( nTermos == 0) {
+    document.write("Sem termos<br>");
+    document.write("Soma dos termos: "+somaTermos);
+    }
+    else if ( nTermos == 1) {
+    document.write(a+"<br>");
+        
+    somaTermos = 0;
+        
+    document.write("Soma dos termos: "+somaTermos);
+    }
+    else if ( nTermos == 2) {
+    document.write(a+"<br>"+b+"<br>");
+        
+    somaTermos = 1;
+        
+    document.write("Soma dos termos: "+somaTermos);
+    }
+    else {
+        
+    nTermos = nTermos - 1;
+        
+    document.write(a + "<br>" + b + "<br>");
+        
+        do {
+        proxTermo = a + b;
+        somaTermos += proxTermo;
+                
+        document.write( proxTermo + "<br>");
+        
+        a = b;
+        b = proxTermo;
+        contador++;
+        } while ( contador != nTermos)
+        
+    somaTermos += 1;
+    
+    document.write("Soma dos termos: "+somaTermos);
+    }
+
+</script>

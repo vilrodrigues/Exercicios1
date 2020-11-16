@@ -1,0 +1,53 @@
+<script>
+
+/* 13. Uma escola tem 5 turmas e cada turma tem N alunos. Crie um programa que informe,
+por turma, o total de alunos com média superior a 7 e a média geral da escola. */
+    
+var contador,
+    contador2,
+    alunosMedias,
+    alunos = 0,
+    somaMedia = 0,
+    mediaGeral = 0,
+    mediAluno = 0,
+    mediaSuperior = 0,
+    totalAlunos = 0;
+    
+
+const media = 7;
+    
+
+document.write("Media >= 7 <br><br>");
+
+contador = 1;
+contadorR = 1;
+    
+    do {
+    alunos = Number(prompt("Turma "+contador+" , quantos alunos?"));
+        
+        do {
+        mediAluno = Number(prompt("Qual a nota do "+contadorR+" º aluno da turma "+contador));
+            
+        somaMedia += mediAluno;
+            
+            if (mediAluno >= 7) {
+            mediaSuperior += 1;
+            }
+            contadorR++;
+        
+        } while (contadorR <= alunos)
+        
+        contadorR = 1;
+        totalAlunos += alunos;
+        mediaGeral =  somaMedia / totalAlunos;
+        
+        document.write("Turma "+contador+" : "+mediaSuperior+"<br>");
+        
+        mediaSuperior = 0;
+        contador++;
+    
+    } while (contador <= 2)
+    
+    document.write("<br>Média geral da escola: "+mediaGeral.toFixed(1));
+    
+</script>

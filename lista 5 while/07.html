@@ -1,0 +1,30 @@
+<script>
+var num,
+    pares, 
+    impares,
+    contador;
+    
+    contador = 1;
+    pares = 0;
+    impares = 0;
+    
+    while (contador <= 3) {
+        
+        num = Number(prompt(" Informe o número:"));
+
+        if (num % 2 == 0) {
+            alert(" O número  é par!");
+            
+            pares =+ 1;
+            contador++;
+        } else {
+            alert(" O número é ímpar!");
+            
+            impares += 1;
+            contador++;
+        }
+    }
+    document.write(pares + " número(s) par(es)<br>");
+    document.write(impares + " número(s) ímpar(es)");
+
+</script>
